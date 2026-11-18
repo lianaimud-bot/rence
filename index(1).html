@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You, Rence ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,serif;background:linear-gradient(135deg,#3b0000,#8b0000,#d4142e);color:white;min-height:100vh;padding:30px 15px;display:flex;justify-content:center;align-items:center;overflow-x:hidden}
+.container{width:100%;max-width:650px;background:rgba(40,0,0,.78);border:1px solid rgba(255,150,150,.4);border-radius:20px;padding:35px 25px;box-shadow:0 0 35px rgba(255,0,40,.35);animation:fadeIn 1.5s ease}
+.heart{text-align:center;font-size:55px;animation:heartbeat 1.5s infinite}
+h1{text-align:center;color:#ffb3b3;margin:15px 0;font-size:30px}
+.subtitle{text-align:center;color:#ffcccc;font-style:italic;margin-bottom:30px}
+.message{line-height:1.9;font-size:16px;color:#ffeaea;text-align:justify}
+.message p{margin-bottom:20px}
+.signature{text-align:center;margin-top:30px;color:#ff9999;font-size:20px;font-style:italic}
+.footer{text-align:center;margin-top:25px;font-size:13px;color:#dbaaaa}
+.floating-heart{position:fixed;bottom:-30px;color:#ff8a9b;font-size:20px;animation:floatUp 7s linear infinite;pointer-events:none;z-index:-1}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@media(max-width:480px){.container{padding:25px 18px}h1{font-size:25px}.message{font-size:15px}}
+</style>
+</head>
+<body>
+<main class="container">
+  <div class="heart">❤️</div>
+  <h1>For You, Rence</h1>
+  <div class="subtitle">A message from the bottom of my heart</div>
+  <section class="message">
+    <p>Rence, I can't forget you. I keep thinking about you, so much that sometimes I can't even focus on my own activities. No matter what I'm doing, my thoughts always go back to you, remembering our conversations, our memories, and all the little moments we shared.</p>
+    <p>Honestly, I'm still struggling to accept the fact that we have to go our separate ways. I still love you, I still miss you, and deep down, I still wish things could go back to the way they used to be.</p>
+    <p>I keep asking myself, does our relationship really have to end like this? Is there really no chance for us to fix things? I know there might be things that made you disappointed or tired, but I hope we can still talk about them and understand each other.</p>
+    <p>Rence, I never took your presence in my life for granted. Ever since you came into my life, you gave me so many reasons to feel happy and motivated every day. I became used to sharing my stories with you, asking how you were doing, and waiting for your messages.</p>
+    <p>I'm not asking you to forget all the problems we've had. I just want us to try one more time, but this time, with a better understanding of each other. I want to learn from my mistakes, improve myself, and build a better relationship with you.</p>
+    <p>If there's still a little part of you that wants to save this relationship, I hope you'll reconsider your decision. I still choose you, Rence. But I also want to know if there's still a part of you that wants to fight for us.</p>
+    <p>I still love you. And honestly, I'm still hoping that our story doesn't have to end here.</p>
+  </section>
+  <div class="signature">With all my heart, ❤️</div>
+  <div class="footer">Made with love, just for you.</div>
+</main>
+<script>
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.className="floating-heart";
+  heart.textContent="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(4+Math.random()*5)+"s";
+  heart.style.fontSize=(12+Math.random()*20)+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),9000);
+}
+setInterval(createHeart,600);
+</script>
+</body>
+</html>
